@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e79608f-4c87-46b5-a422-3d6fd549fea0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/FileMerOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Files/MercenaryMng.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/AirForce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Commander.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Marine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Navy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Sniper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Mercenary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/FileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MercenaryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,6 +86,9 @@
       <workItem from="1733148362797" duration="4846000" />
       <workItem from="1733186772129" duration="5953000" />
       <workItem from="1733197666884" duration="9695000" />
+      <workItem from="1733233907824" duration="3104000" />
+      <workItem from="1733274572870" duration="2864000" />
+      <workItem from="1733293981832" duration="1742000" />
     </task>
     <servers />
   </component>
