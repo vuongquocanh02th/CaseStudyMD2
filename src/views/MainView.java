@@ -1,13 +1,10 @@
 package views;
 import model.Mercenary;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MercenaryView {
+public class MainView {
     public int displayMenu(){
         Scanner sc = new Scanner(System.in);
         System.out.println("1. Read file");
