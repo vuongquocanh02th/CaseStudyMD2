@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e79608f-4c87-46b5-a422-3d6fd549fea0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/AddCommander.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/CommanderProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/FileMerOperation.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/AirForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/AirForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Commander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Commander.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Marine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Marine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Mercenary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Mercenary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Navy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Navy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Sniper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Sniper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
       <workItem from="1733197666884" duration="9695000" />
       <workItem from="1733233907824" duration="3104000" />
       <workItem from="1733274572870" duration="2864000" />
-      <workItem from="1733293981832" duration="4744000" />
+      <workItem from="1733293981832" duration="6305000" />
     </task>
     <servers />
   </component>
