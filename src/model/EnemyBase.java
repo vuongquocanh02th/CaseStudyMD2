@@ -14,11 +14,16 @@ public class EnemyBase {
         this.enemies = new ArrayList<>();
     }
 
-    public void addEnemy(Enemy enemy){
+    public void addEnemy(Enemy enemy) {
         enemies.add(enemy);
     }
-    public void removeEnemy(Enemy enemy){
-        enemies.remove(enemy);
+
+    public void removeEnemy(Enemy enemy) {
+        if (enemies.remove(enemy)) {
+            System.out.println("Enemy removed: " + enemy.getEnemyName());
+        } else {
+            System.out.println("Not found: " + enemy.getEnemyName());
+        }
     }
 
     public int getBaseId() {

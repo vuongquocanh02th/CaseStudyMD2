@@ -13,13 +13,11 @@ public class CommandController {
     }
 
     public void killEnemy(Enemy enemy) {
-        System.out.println("Killing enemy " + enemy.getEnemyName());
-        commander.gainMoney();
-        commanderView.displayCommanderInfo(commander);
+        Command killEnemyCommand = new KillEnemyCommand(commander, enemy);
+        killEnemyCommand.execute();
     }
     public void destroyBase(EnemyBase base){
-        System.out.println("Destroying enemy base " + base.getBaseName());
-        commander.gainMoney();
-        commanderView.displayCommanderInfo(commander);
+        Command destroyBaseCommand = new DestroyBaseCommand(commander, base);
+        destroyBaseCommand.execute();
     }
 }
