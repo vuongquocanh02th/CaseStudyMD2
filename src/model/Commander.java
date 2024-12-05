@@ -75,4 +75,8 @@ public class Commander {
     public void setMercenaryList(List<Mercenary> mercenaryList) {
         this.mercenaryList = mercenaryList;
     }
+    public double gainMoney(){
+        return this.money + 2000;
+    }
+
 }
