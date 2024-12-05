@@ -1,66 +1,37 @@
 package model;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Commander implements Serializable {
-    private int commanderId;
+public class Commander {
+    private int commanderID;
     private String commanderName;
     private String commanderRank;
-    private List<Object> subordinates;    //List cac doi tuong thuoc cac model con lai
+    private double money = 100000;
+    private List<Mercenary> mercenaryList;
 
-    public Commander(int commanderId, String commanderName, String commanderRank) {
-        this.commanderId = commanderId;
+    public Commander(int commanderID, String commanderName, String commanderRank) {
+        this.commanderID = commanderID;
         this.commanderName = commanderName;
         this.commanderRank = commanderRank;
+        this.mercenaryList = new ArrayList<>();
     }
 
-    public int getCommanderId() {
-        return commanderId;
+    public void addMercenary(Mercenary mercenary) {
+        if (this.money >= mercenary.getHirePrice()) {
+            mercenaryList.add(mercenary);
+            this.money -= mercenary.getHirePrice();
+            System.out.println("Mercenary added: " + mercenary.getMerName());
+            System.out.println("Remaining money: " + this.money);
+        } else {
+            System.out.println("Not enough money to hire " + mercenary.getMerName());
+        }
     }
 
-    public void setCommanderId(int commanderId) {
-        this.commanderId = commanderId;
-    }
-
-    public String getCommanderName() {
-        return commanderName;
-    }
-
-    public void setCommanderName(String commanderName) {
-        this.commanderName = commanderName;
-    }
-
-    public String getCommanderRank() {
-        return commanderRank;
-    }
-
-    public void setCommanderRank(String commanderRank) {
-        this.commanderRank = commanderRank;
-    }
-
-    public List<Object> getSubordinates() {
-        return subordinates;
-    }
-
-    public void setSubordinates(List<Object> subordinates) {
-        this.subordinates = subordinates;
-    }
-
-    public void addSubordinate(Object subordinate) {
-        subordinates.add(subordinate);
-    }
-
-    public void removeSubordinate(Object subordinate) {
-        subordinates.remove(subordinate);
-    }
-
-    @Override
-    public String toString() {
-        return "Commander{" +
-                "commanderId=" + commanderId +
-                ", commanderName='" + commanderName + '\'' +
-                ", commanderRank='" + commanderRank + '\'' +
-                '}';
+    public void removeMercenary(Mercenary mercenary) {
+        if(mercenaryList.remove(mercenary)){
+            this.money += mercenary.getHirePrice();
+            System.out.println("Mercenary removed: " + mercenary.getMerName());
+        }
     }
 }

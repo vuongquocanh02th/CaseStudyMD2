@@ -5,16 +5,20 @@ import java.io.Serializable;
 public class Mercenary implements Serializable {
     private int merId;
     private String merName;
-    private int merPower;
-    private double merSalary;
-    private String merWeapon;
+    private String unit;
+    private double hirePrice;
+    private String commanderName;
+    private String weaponName;
+    private String vehicleName;
 
-    public Mercenary(int merId, String merName, int merPower, double merSalary, String merWeapon) {
+    public Mercenary(int merId, String merName, String unit, double hirePrice, String commanderName, String weaponName, String vehicleName) {
         this.merId = merId;
         this.merName = merName;
-        this.merPower = merPower;
-        this.merSalary = merSalary;
-        this.merWeapon = merWeapon;
+        this.unit = unit;
+        this.hirePrice = hirePrice;
+        this.commanderName = commanderName;
+        this.weaponName = weaponName;
+        this.vehicleName = vehicleName;
     }
 
     public int getMerId() {
@@ -33,38 +37,43 @@ public class Mercenary implements Serializable {
         this.merName = merName;
     }
 
-    public int getMerPower() {
-        return merPower;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setMerPower(int merPower) {
-        this.merPower = merPower;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
-    public double getMerSalary() {
-        return merSalary;
+    public double getHirePrice() {
+        return hirePrice;
     }
 
-    public void setMerSalary(double merSalary) {
-        this.merSalary = merSalary;
+    public void setHirePrice(double hirePrice) {
+        this.hirePrice = hirePrice;
     }
 
-    public String getMerWeapon() {
-        return merWeapon;
+    public String getCommanderName() {
+        return commanderName;
     }
 
-    public void setMerWeapon(String merWeapon) {
-        this.merWeapon = merWeapon;
+    public void setCommanderName(String commanderName) {
+        this.commanderName = commanderName;
     }
 
-    @Override
-    public String toString() {
-        return "Mercenary{" +
-                "merId=" + merId +
-                ", merName='" + merName + '\'' +
-                ", merPower=" + merPower +
-                ", merSalary=" + merSalary +
-                ", merWeapon='" + merWeapon + '\'' +
-                '}';
+    public String getWeaponName() {
+        return weaponName;
+    }
+
+    public void setWeaponName(String weaponName) {
+        this.weaponName = weaponName;
+    }
+
+    public String getVehicleName() {
+        return vehicleName;
+    }
+
+    public void setVehicleName(String vehicleName) {
+        this.vehicleName = vehicleName;
     }
 }
