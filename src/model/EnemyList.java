@@ -21,4 +21,8 @@ public class EnemyList {
     public List<Enemy> getEnemies() {
         return enemies;
     }
+
+    public void setEnemies(List<Enemy> enemies) {
+        this.enemies = enemies;
+    }
 }

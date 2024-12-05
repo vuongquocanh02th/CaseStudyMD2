@@ -4,7 +4,7 @@ public class Enemy {
     private int enemyId;
     private String enemyName;
 
-    public Enemy(int enemyId, String enemyName, String baseName) {
+    public Enemy(int enemyId, String enemyName) {
         this.enemyId = enemyId;
         this.enemyName = enemyName;
     }

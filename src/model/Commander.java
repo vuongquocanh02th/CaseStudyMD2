@@ -15,17 +15,6 @@ public class Commander {
         this.money = 1000000;
     }
 
-    public boolean hireMercenary(Mercenary mercenary) {
-        if (this.money >= mercenary.getHirePrice()) {
-            this.money -= mercenary.getHirePrice();
-            System.out.println("Mercenary hired. Remaining money: " + this.money);
-            return true;
-        } else {
-            System.out.println("Not enough money to hire Mercenary.");
-            return false;
-        }
-    }
-
 
     public int getCommanderID() {
         return commanderID;
