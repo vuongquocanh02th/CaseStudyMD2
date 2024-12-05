@@ -8,17 +8,14 @@ public class Mercenary implements Serializable {
     private String unit;
     private double hirePrice;
     private String commanderName;
-    private String weaponName;
-    private String vehicleName;
 
-    public Mercenary(int merId, String merName, String unit, double hirePrice, String commanderName, String weaponName, String vehicleName) {
+
+    public Mercenary(int merId, String merName, String unit, double hirePrice, String commanderName) {
         this.merId = merId;
         this.merName = merName;
         this.unit = unit;
         this.hirePrice = hirePrice;
         this.commanderName = commanderName;
-        this.weaponName = weaponName;
-        this.vehicleName = vehicleName;
     }
 
     public int getMerId() {
@@ -61,19 +58,5 @@ public class Mercenary implements Serializable {
         this.commanderName = commanderName;
     }
 
-    public String getWeaponName() {
-        return weaponName;
-    }
 
-    public void setWeaponName(String weaponName) {
-        this.weaponName = weaponName;
-    }
-
-    public String getVehicleName() {
-        return vehicleName;
-    }
-
-    public void setVehicleName(String vehicleName) {
-        this.vehicleName = vehicleName;
-    }
 }

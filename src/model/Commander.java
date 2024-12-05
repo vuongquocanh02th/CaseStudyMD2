@@ -6,35 +6,26 @@ import java.util.List;
 public class Commander {
     private int commanderID;
     private String commanderName;
-    private String commanderRank;
-    private double money = 100000;
-    private List<Mercenary> mercenaryList;
+    private double money;
 
-    public Commander(int commanderID, String commanderName, String commanderRank) {
+
+    public Commander(int commanderID, String commanderName) {
         this.commanderID = commanderID;
         this.commanderName = commanderName;
-        this.commanderRank = commanderRank;
-        this.mercenaryList = new ArrayList<>();
+        this.money = 1000000;
     }
 
-    public void addMercenary(Mercenary mercenary) {
+    public boolean hireMercenary(Mercenary mercenary) {
         if (this.money >= mercenary.getHirePrice()) {
-            mercenaryList.add(mercenary);
             this.money -= mercenary.getHirePrice();
-            System.out.println("Mercenary added: " + mercenary.getMerName());
-            System.out.println("Remaining money: " + this.money);
+            System.out.println("Mercenary hired. Remaining money: " + this.money);
+            return true;
         } else {
-            System.out.println("Not enough money to hire " + mercenary.getMerName());
+            System.out.println("Not enough money to hire Mercenary.");
+            return false;
         }
     }
 
-    public void removeMercenary(Mercenary mercenary) {
-        if(mercenaryList.remove(mercenary)){
-            this.money += mercenary.getHirePrice();
-            System.out.println("Mercenary removed: " + mercenary.getMerName());
-            System.out.println("Remaining money: " + this.money);
-        }
-    }
 
     public int getCommanderID() {
         return commanderID;
@@ -52,13 +43,7 @@ public class Commander {
         this.commanderName = commanderName;
     }
 
-    public String getCommanderRank() {
-        return commanderRank;
-    }
 
-    public void setCommanderRank(String commanderRank) {
-        this.commanderRank = commanderRank;
-    }
 
     public double getMoney() {
         return money;
@@ -67,16 +52,4 @@ public class Commander {
     public void setMoney(double money) {
         this.money = money;
     }
-
-    public List<Mercenary> getMercenaryList() {
-        return mercenaryList;
-    }
-
-    public void setMercenaryList(List<Mercenary> mercenaryList) {
-        this.mercenaryList = mercenaryList;
-    }
-    public double gainMoney(){
-        return this.money + 2000;
-    }
-
 }
