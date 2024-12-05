@@ -32,6 +32,47 @@ public class Commander {
         if(mercenaryList.remove(mercenary)){
             this.money += mercenary.getHirePrice();
             System.out.println("Mercenary removed: " + mercenary.getMerName());
+            System.out.println("Remaining money: " + this.money);
         }
+    }
+
+    public int getCommanderID() {
+        return commanderID;
+    }
+
+    public void setCommanderID(int commanderID) {
+        this.commanderID = commanderID;
+    }
+
+    public String getCommanderName() {
+        return commanderName;
+    }
+
+    public void setCommanderName(String commanderName) {
+        this.commanderName = commanderName;
+    }
+
+    public String getCommanderRank() {
+        return commanderRank;
+    }
+
+    public void setCommanderRank(String commanderRank) {
+        this.commanderRank = commanderRank;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
+    public List<Mercenary> getMercenaryList() {
+        return mercenaryList;
+    }
+
+    public void setMercenaryList(List<Mercenary> mercenaryList) {
+        this.mercenaryList = mercenaryList;
     }
 }
