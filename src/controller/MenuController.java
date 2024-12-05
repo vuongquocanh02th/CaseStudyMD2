@@ -185,8 +185,18 @@ public class MenuController {
         int id = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("Enter enemy name: ");
-        String name = scanner.nextLine();
+        String name;
+        while (true) {
+            System.out.print("Enter enemy Name (start with Upper, no number, can contain spaces): ");
+            name = scanner.nextLine();
+
+            // Kiểm tra tính hợp lệ của tên
+            if (RegexValidator.validateName(name)) {
+                break;  // Thoát vòng lặp nếu tên hợp lệ
+            } else {
+                System.out.println("Invalid! Again!");
+            }
+        }
 
         Enemy enemy = new Enemy(id, name);
         dataManager.getEnemyList().addEnemy(enemy);
@@ -204,9 +214,18 @@ public class MenuController {
         int id = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.print("Enter mercenary Name: ");
-        String name = scanner.nextLine();
+        String name;
+        while (true) {
+            System.out.print("Enter mercenary Name (start with Upper, no number, can contain spaces): ");
+            name = scanner.nextLine();
 
+            // Kiểm tra tính hợp lệ của tên
+            if (RegexValidator.validateName(name)) {
+                break;  // Thoát vòng lặp nếu tên hợp lệ
+            } else {
+                System.out.println("Invalid! Again!");
+            }
+        }
         System.out.print("Enter mercenary Unit: ");
         String unit = scanner.nextLine();
 
@@ -236,11 +255,19 @@ public class MenuController {
     private void addCommander(Scanner scanner) {
         System.out.print("Enter commander Id: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
+        String name;
+        while (true) {
+            System.out.print("Enter commander Name (start with Upper, no number, can contain spaces): ");
+            name = scanner.nextLine();
 
-        System.out.print("Enter commander Name: ");
-        String name = scanner.nextLine();
-
+            // Kiểm tra tính hợp lệ của tên
+            if (RegexValidator.validateName(name)) {
+                break;  // Thoát vòng lặp nếu tên hợp lệ
+            } else {
+                System.out.println("Invalid! Again!");
+            }
+        }
         Commander commander = new Commander(id, name);
         dataManager.getCommanderList().addCommander(commander);
         dataManager.saveCommanders();
