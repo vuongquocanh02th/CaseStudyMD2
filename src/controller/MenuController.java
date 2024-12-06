@@ -212,7 +212,11 @@ public class MenuController {
         int id = scanner.nextInt();
         //int id;
         scanner.nextLine();
-
+        if (dataManager.getEnemyList().getEnemies().stream()
+                .anyMatch(e -> e.getEnemyId() == id)) {
+            System.out.println("Enemy ID already exists. Please enter a different ID.");
+            return; // Exit method and prevent adding an enemy with the same ID
+        }
         String name;
         while (true) {
 //            System.out.print("Enter enemy Id: ");
@@ -245,7 +249,11 @@ public class MenuController {
         System.out.print("Enter mercenary Id: ");
         int id = scanner.nextInt();
         scanner.nextLine();
-
+        if (dataManager.getMercenaryList().getMercenaries().stream()
+                .anyMatch(m -> m.getMerId() == id)) {
+            System.out.println("Mercenary ID already exists. Please enter a different ID.");
+            return; // Exit method and prevent adding a mercenary with the same ID
+        }
         String name;
         while (true) {
             System.out.print("Enter mercenary Name (start with Upper, no number, can contain spaces): ");
@@ -289,6 +297,11 @@ public class MenuController {
         System.out.print("Enter commander Id: ");
         int id = scanner.nextInt();
         scanner.nextLine();
+        if (dataManager.getCommanderList().getCommanders().stream()
+                .anyMatch(c -> c.getCommanderID() == id)) {
+            System.out.println("Commander ID already exists. Please enter a different ID.");
+            return; // Exit method and prevent adding a commander with the same ID
+        }
         String name;
         while (true) {
             System.out.print("Enter commander Name (start with Upper, no number, can contain spaces): ");
