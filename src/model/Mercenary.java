@@ -3,6 +3,7 @@ package model;
 import java.io.Serializable;
 
 public class Mercenary implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int merId;
     private String merName;
     private String unit;
@@ -57,6 +58,7 @@ public class Mercenary implements Serializable {
     public void setCommanderName(String commanderName) {
         this.commanderName = commanderName;
     }
+
 
 
 }

@@ -3,7 +3,8 @@ package model;
 import java.io.*;
 import java.util.*;
 
-public class MercenaryList {
+public class MercenaryList implements Serializable{
+    private static final long serialVersionUID = 1L;
     private List<Mercenary> mercenaries;
 
 
@@ -29,4 +30,5 @@ public class MercenaryList {
     public void setMercenaries(List<Mercenary> mercenaries) {
         this.mercenaries = mercenaries;
     }
+
 }

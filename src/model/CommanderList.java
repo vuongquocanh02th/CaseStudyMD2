@@ -2,7 +2,8 @@ package model;
 import java.io.*;
 import java.util.*;
 
-public class CommanderList {
+public class CommanderList implements Serializable{
+    private static final long serialVersionUID = 1L;
     private List<Commander> commanders;
 
 
