@@ -25,7 +25,7 @@ public class DataManager {
     }
 
     private void loadEnemies() {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\EnemyList.dat"))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\EnemyList.txt"))) {
             enemyList.setEnemies((List<Enemy>) ois.readObject());
         } catch (EOFException e) {
             System.out.println("File empty! No data to read!");
@@ -35,7 +35,7 @@ public class DataManager {
     }
 
     private void loadMercenaries() {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\MercenaryList.dat"))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\MercenaryList.txt"))) {
             mercenaryList.setMercenaries((List<Mercenary>) ois.readObject());
         } catch (EOFException e) {
             System.out.println("File empty! No data to read!");
@@ -45,7 +45,7 @@ public class DataManager {
     }
 
     private void loadCommanders() {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.dat"))) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.txt"))) {
             commanderList.setCommanders((List<Commander>) ois.readObject());
         } catch (EOFException e) {
             System.out.println("File empty! No data to read!");
@@ -76,7 +76,7 @@ public class DataManager {
     // Lưu Commander vào file .dat và .csv
     public void saveCommanders() {
         // Lưu vào .dat
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.txt"))) {
             oos.writeObject(commanderList.getCommanders());
         } catch (IOException e) {
             e.printStackTrace();
@@ -96,7 +96,7 @@ public class DataManager {
     // Lưu Mercenary vào file .dat và .csv
     public void saveMercenaries() {
         // Lưu vào .dat
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\MercenaryList.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\MercenaryList.txt"))) {
             oos.writeObject(mercenaryList.getMercenaries());
         } catch (IOException e) {
             e.printStackTrace();
@@ -116,7 +116,7 @@ public class DataManager {
     // Lưu Enemy vào file .dat và .csv
     public void saveEnemies() {
         // Lưu vào .dat
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\EnemyList.dat"))) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\EnemyList.txt"))) {
             oos.writeObject(enemyList.getEnemies());
         } catch (IOException e) {
             e.printStackTrace();

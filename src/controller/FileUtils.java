@@ -8,7 +8,12 @@ import java.util.List;
 
 public class FileUtils {
     public static void createFilesIfNotExist() {
-        String[] files = {"files/CommanderList.dat", "files/CommanderList.csv", "files/MercenaryList.dat", "files/MercenaryList.csv", "files/EnemyList.dat", "files/EnemyList.csv"};
+        String[] files = {"D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.dat",
+                "D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.csv",
+                "D:\\CodeGym\\Module2\\case-study\\src\\files\\MercenaryList.dat",
+                "D:\\CodeGym\\Module2\\case-study\\src\\files\\MercenaryList.csv",
+                "D:\\CodeGym\\Module2\\case-study\\src\\files\\EnemyList.dat",
+                "D:\\CodeGym\\Module2\\case-study\\src\\files\\EnemyList.csv"};
 
         for (String file : files) {
             File f = new File(file);
