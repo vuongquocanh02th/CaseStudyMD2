@@ -114,6 +114,7 @@ public class MenuController {
                 System.out.println("Cannot fire commander working!");
             } else {
                 dataManager.getCommanderList().removeCommander(id);
+                dataManager.saveCommanders();
                 System.out.println("Commander removed successfully.");
             }
         } else {
@@ -142,6 +143,7 @@ public class MenuController {
                 commander.setMoney(commander.getMoney() + 2000);
                 System.out.println("Enemy removed. Commander’s money increased: " + commander.getMoney());
             }
+            dataManager.saveEnemies();
             System.out.println("Enemy removed successfully.");
         } else {
             System.out.println("Enemy not found.");
@@ -164,11 +166,7 @@ public class MenuController {
                     .filter(c -> c.getCommanderName().equals(mercenary.getCommanderName()))
                     .findFirst()
                     .orElse(null);
-
-            if (commander != null) {
-                commander.setMoney(commander.getMoney() + mercenary.getHirePrice());
-                System.out.println("Mercenary removed. Remaining money for Commander: " + commander.getMoney());
-            }
+            dataManager.saveMercenaries();
             System.out.println("Mercenary removed successfully.");
         } else {
             System.out.println("Mercenary not found.");
@@ -201,6 +199,7 @@ public class MenuController {
             // Cập nhật Mercenary
             dataManager.getMercenaryList().removeMercenary(id);
             dataManager.getMercenaryList().addMercenary(mercenary);
+            dataManager.saveMercenaries();
             System.out.println("Mercenary updated successfully.");
         } else {
             System.out.println("Mercenary not found.");
