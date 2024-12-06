@@ -144,6 +144,7 @@ public class MenuController {
                 System.out.println("Enemy removed. Commander’s money increased: " + commander.getMoney());
             }
             dataManager.saveEnemies();
+            dataManager.saveCommanders();
             System.out.println("Enemy removed successfully.");
         } else {
             System.out.println("Enemy not found.");
@@ -278,6 +279,7 @@ public class MenuController {
             AddMercenaryCommand command = new AddMercenaryCommand(mercenary, dataManager.getCommanderList(), dataManager.getMercenaryList());
             command.execute();
             dataManager.saveMercenaries();
+            dataManager.saveCommanders();
         } else {
             System.out.println("Not enough money to hire or Commander not exists.");
         }
