@@ -1,9 +1,12 @@
 package controller;
 
 import model.Commander;
+import model.CommanderList;
 import model.Enemy;
 import model.Mercenary;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MenuController {
@@ -34,14 +37,20 @@ public class MenuController {
                 case 1:
                     // Thêm Commander
                     addCommander(scanner);
+                    System.out.println("Commander List in dat file: ");
+                    readCommanderData("D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.dat");
                     break;
                 case 2:
                     // Thêm Mercenary
                     addMercenary(scanner);
+                    System.out.println("Mercenary List in dat file: ");
+                    readMercData("D:\\CodeGym\\Module2\\case-study\\src\\files\\MercenaryList.dat");
                     break;
                 case 3:
                     // Thêm Enemy
                     addEnemy(scanner);
+                    System.out.println("Enemy List in dat file: ");
+                    readEnemyData("D:\\CodeGym\\Module2\\case-study\\src\\files\\EnemyList.dat");
                     break;
                 case 4:
                     // Sửa Mercenary
@@ -68,6 +77,24 @@ public class MenuController {
         }
     }
 
+    private void readCommanderData(String filePath) {
+        List<Commander> commanderDataFromFile = DataManager.readDataFromFileCmd(filePath);
+        for (Commander commander : commanderDataFromFile) {
+            System.out.println(commander);
+        }
+    }
+    private void readMercData(String filePath) {
+        List<Mercenary> mercDataFromFile = DataManager.readDataFromFileMerc(filePath);
+        for (Mercenary mercenary : mercDataFromFile) {
+            System.out.println(mercenary);
+        }
+    }
+    private void readEnemyData(String filePath) {
+        List<Enemy> enemyDataFromFile = DataManager.readDataFromFileEnemy(filePath);
+        for (Enemy enemy : enemyDataFromFile) {
+            System.out.println(enemy);
+        }
+    }
     private void removeCommander(Scanner scanner) {
         System.out.print("Enter commander ID to fire: ");
         int id = scanner.nextInt();
@@ -183,10 +210,15 @@ public class MenuController {
     private void addEnemy(Scanner scanner) {
         System.out.print("Enter enemy Id: ");
         int id = scanner.nextInt();
+        //int id;
         scanner.nextLine();
 
         String name;
         while (true) {
+//            System.out.print("Enter enemy Id: ");
+//            id = scanner.nextInt();
+//            scanner.nextLine();
+
             System.out.print("Enter enemy Name (start with Upper, no number, can contain spaces): ");
             name = scanner.nextLine();
 
@@ -273,4 +305,5 @@ public class MenuController {
         dataManager.saveCommanders();
         System.out.println("Commander added successfully.");
     }
+
 }

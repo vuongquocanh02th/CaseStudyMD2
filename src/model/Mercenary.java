@@ -59,6 +59,14 @@ public class Mercenary implements Serializable {
         this.commanderName = commanderName;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Mercenary{" +
+                "merId=" + merId +
+                ", merName='" + merName + '\'' +
+                ", unit='" + unit + '\'' +
+                ", hirePrice=" + hirePrice +
+                ", commanderName='" + commanderName + '\'' +
+                '}';
+    }
 }

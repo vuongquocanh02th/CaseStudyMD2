@@ -3,6 +3,7 @@ package controller;
 import model.*;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataManager {
@@ -47,6 +48,12 @@ public class DataManager {
     private void loadCommanders() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("D:\\CodeGym\\Module2\\case-study\\src\\files\\CommanderList.dat"))) {
             commanderList.setCommanders((List<Commander>) ois.readObject());
+            for (Commander commander : commanderList.getCommanders()) {
+                System.out.println("Commander ID: " + commander.getCommanderID());
+                System.out.println("Commander Name: " + commander.getCommanderName());
+                System.out.println("Commander Money: " + commander.getMoney());
+                System.out.println("-----------------------------");
+            }
         } catch (EOFException e) {
             System.out.println("File empty! No data to read!");
         } catch (IOException | ClassNotFoundException e) {
@@ -131,5 +138,33 @@ public class DataManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static List<Commander> readDataFromFileCmd(String filePath) {
+        List<Commander> commanderList = new ArrayList<>();
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(filePath))) {
+            commanderList = (List<Commander>) objectInputStream.readObject();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return commanderList;
+    }
+    public static List<Mercenary> readDataFromFileMerc(String filePath) {
+        List<Mercenary> mercenaries = new ArrayList<>();
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(filePath))) {
+            mercenaries = (List<Mercenary>) objectInputStream.readObject();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return mercenaries;
+    }
+    public static List<Enemy> readDataFromFileEnemy(String filePath) {
+        List<Enemy> enemies = new ArrayList<>();
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(filePath))) {
+            enemies = (List<Enemy>) objectInputStream.readObject();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return enemies;
     }
 }

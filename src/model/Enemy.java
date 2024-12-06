@@ -28,4 +28,11 @@ public class Enemy implements Serializable {
         this.enemyName = enemyName;
     }
 
+    @Override
+    public String toString() {
+        return "Enemy{" +
+                "enemyId=" + enemyId +
+                ", enemyName='" + enemyName + '\'' +
+                '}';
+    }
 }

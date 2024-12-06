@@ -43,4 +43,13 @@ public class Commander implements Serializable {
     public void setMoney(double money) {
         this.money = money;
     }
+
+    @Override
+    public String toString() {
+        return "Commander{" +
+                "commanderID=" + commanderID +
+                ", commanderName='" + commanderName + '\'' +
+                ", money=" + money +
+                '}';
+    }
 }
