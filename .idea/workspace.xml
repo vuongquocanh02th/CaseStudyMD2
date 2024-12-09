@@ -7,10 +7,6 @@
     <list default="true" id="1e79608f-4c87-46b5-a422-3d6fd549fea0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/CommanderList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/CommanderList.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/CommanderList.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/CommanderList.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/MercenaryList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/MercenaryList.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/MercenaryList.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/MercenaryList.dat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,10 @@
       <workItem from="1733404045498" duration="10731000" />
       <workItem from="1733447607707" duration="21116000" />
       <workItem from="1733493972302" duration="595000" />
-      <workItem from="1733498307169" duration="1012000" />
+      <workItem from="1733498307169" duration="1705000" />
+      <workItem from="1733555561298" duration="4000" />
+      <workItem from="1733575630946" duration="1341000" />
+      <workItem from="1733705090520" duration="3131000" />
     </task>
     <servers />
   </component>

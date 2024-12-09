@@ -25,9 +25,9 @@ public class MenuController {
             System.out.println("2. Add Mercenary");
             System.out.println("3. Add Enemy");
             System.out.println("4. Update Mercenary");
-            System.out.println("5. Remove Mercenary");
-            System.out.println("6. Remove Enemy");
-            System.out.println("7. Remove Commander");
+            System.out.println("5. Sack Mercenary");
+            System.out.println("6. Kill Enemy");
+            System.out.println("7. Sack Commander");
             System.out.println("8. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
@@ -115,7 +115,7 @@ public class MenuController {
             } else {
                 dataManager.getCommanderList().removeCommander(id);
                 dataManager.saveCommanders();
-                System.out.println("Commander removed successfully.");
+                System.out.println("Commander sacked successfully.");
             }
         } else {
             System.out.println("Commander not found.");
@@ -123,7 +123,7 @@ public class MenuController {
     }
 
     private void removeEnemy(Scanner scanner) {
-        System.out.print("Choose Enemy Id to kill: ");
+        System.out.print("Aim at Enemy to kill: ");
         int id = scanner.nextInt();
         scanner.nextLine(); // Consume newline
 
@@ -141,18 +141,18 @@ public class MenuController {
 
             if (commander != null) {
                 commander.setMoney(commander.getMoney() + 2000);
-                System.out.println("Enemy removed. Commander’s money increased: " + commander.getMoney());
+                System.out.println("Enemy killed! Commander’s money increased: " + commander.getMoney());
             }
             dataManager.saveEnemies();
             dataManager.saveCommanders();
-            System.out.println("Enemy removed successfully.");
+            System.out.println("You killed an enemy! Clear all enemies to win the battle!");
         } else {
             System.out.println("Enemy not found.");
         }
     }
 
     private void removeMercenary(Scanner scanner) {
-        System.out.print("Enter mercenary Id need removing: ");
+        System.out.print("Enter mercenary Id need to be sacked: ");
         int id = scanner.nextInt();
         scanner.nextLine(); // Consume newline
 
@@ -168,7 +168,7 @@ public class MenuController {
                     .findFirst()
                     .orElse(null);
             dataManager.saveMercenaries();
-            System.out.println("Mercenary removed successfully.");
+            System.out.println("Mercenary sacked successfully.");
         } else {
             System.out.println("Mercenary not found.");
         }
